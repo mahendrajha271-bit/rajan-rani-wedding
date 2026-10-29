@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rajan ♥ Rani | Wedding Invitation</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap');
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  background:#31060d;color:#fce8bd;
+  font-family:'Poppins',sans-serif;
+  text-align:center;
+}
+.page{
+  min-height:100vh;padding:28px 15px;
+  display:flex;align-items:center;justify-content:center;
+  background:
+  radial-gradient(ellipse at center,#781c28 0%,#410b16 55%,#210309 100%);
+}
+.card{
+  width:100%;max-width:520px;padding:32px 22px;
+  border:2px solid #d6ae58;outline:1px solid #d6ae58;
+  outline-offset:6px;border-radius:180px 180px 18px 18px;
+  background:linear-gradient(145deg,#641522,#310711);
+  box-shadow:0 0 35px #e0ae4830;
+  position:relative;overflow:hidden;
+}
+.card:before,.card:after{
+  content:"✦";position:absolute;color:#edca79;
+  font-size:28px;top:22px
+}
+.card:before{left:25px}.card:after{right:25px}
+.ornament{color:#e8c477;font-size:27px;letter-spacing:9px}
+.small{font-size:11px;letter-spacing:4px;color:#e7c77f;margin:14px 0}
+h1{
+  font-family:'Great Vibes',cursive;font-size:clamp(65px,15vw,92px);
+  font-weight:400;line-height:1.15;color:#f9d98b;
+  text-shadow:0 3px 15px #f5c65b55;
+}
+.amp{font-family:'Playfair Display',serif;font-size:27px;color:#fff0c9;margin:2px}
+.subtitle{font-family:'Playfair Display',serif;font-size:17px;line-height:1.8;margin:20px 0;color:#fff0d0}
+.names{margin:22px 0}
+.names p{font-family:'Playfair Display',serif;font-size:14px;color:#e9c77d;letter-spacing:3px}
+.divider{color:#d9ae5b;font-size:23px;margin:15px}
+.details{
+  border-top:1px solid #b58b48;border-bottom:1px solid #b58b48;
+  padding:20px 8px;margin:20px 0;line-height:2;
+}
+.details strong{color:#f8d98d;font-family:'Playfair Display',serif;font-size:19px}
+.details p{font-size:14px}
+.count-title{font-size:12px;letter-spacing:3px;color:#edcc82;margin:20px 0 12px}
+.countdown{display:flex;justify-content:center;gap:9px}
+.time{
+  background:#27050c;border:1px solid #c9a052;border-radius:9px;
+  padding:10px 7px;min-width:65px;
+}
+.time b{display:block;font-family:'Playfair Display',serif;font-size:23px;color:#ffdf96}
+.time span{font-size:9px;letter-spacing:1px}
+button,.map{
+  display:inline-block;border:1px solid #e4c174;
+  border-radius:30px;background:#d6ad60;color:#390a12;
+  padding:12px 22px;margin:12px 5px;text-decoration:none;
+  font:500 12px 'Poppins',sans-serif;cursor:pointer;
+}
+button:hover,.map:hover{background:#ffe4a2}
+.footer{font-size:11px;color:#e6c77f;line-height:2;margin-top:22px}
+#musicStatus{font-size:11px;color:#e9cc8a}
+@media(max-width:360px){.time{min-width:56px}.card{padding:30px 14px}}
+</style>
+</head>
+<body>
+<div class="page">
+ <main class="card">
+  <div class="ornament">❀ ❖ ❀</div>
+  <p class="small">॥ श्री गणेशाय नमः ॥</p>
+  <p class="subtitle">Together with our families<br>we joyfully invite you to celebrate<br>the wedding of</p>
+
+  <div class="names">
+   <h1>Rajan</h1>
+   <div class="amp">♥</div>
+   <h1>Rani</h1>
+  </div>
+
+  <div class="divider">✧ ❖ ✧</div>
+  <p class="subtitle">Two hearts, one beautiful journey.<br>Your presence will make our day special.</p>
+
+  <section class="details">
+   <p class="small">THE WEDDING CELEBRATION</p>
+   <strong>10 December 2026</strong>
+   <p>Thursday | 11:00 PM</p>
+   <div class="divider">❀</div>
+   <strong>Wedding Venue</strong>
+   <p>Goimishra Lagma</p>
+   <p>Ghanshyampur, Darbhanga, Bihar</p>
+   <a class="map" target="_blank" rel="noopener"
+    href="https://www.google.com/maps/search/?api=1&query=Goimishra+Lagma+Ghanshyampur+Darbhanga+Bihar">
+    📍 Find Venue on Map
+   </a>
+  </section>
+
+  <p class="count-title">COUNTDOWN TO THE BIG DAY</p>
+  <div class="countdown">
+   <div class="time"><b id="days">00</b><span>DAYS</span></div>
+   <div class="time"><b id="hours">00</b><span>HOURS</span></div>
+   <div class="time"><b id="mins">00</b><span>MINUTES</span></div>
+   <div class="time"><b id="secs">00</b><span>SECONDS</span></div>
+  </div>
+
+  <div style="margin-top:22px">
+   <button id="musicBtn" onclick="toggleMusic()">♫ Play Wedding Music</button>
+   <p id="musicStatus">Tap to play the celebration tune</p>
+  </div>
+
+  <div class="divider">✦ ❀ ✦</div>
+  <p class="subtitle">Your blessings and good wishes<br>are the greatest gifts to us.</p>
+  <div class="ornament">❀ ❖ ❀</div>
+  <p class="footer">MADE WITH LOVE<br>RAJAN ♥ RANI<br>10 • 12 • 2026</p>
+ </main>
+</div>
+
+<script>
+const weddingDate = new Date("2026-12-10T23:00:00+05:30").getTime();
+
+function updateCountdown(){
+ const now=Date.now();
+ let diff=Math.max(0,weddingDate-now);
+ const d=Math.floor(diff/86400000);
+ const h=Math.floor((diff%86400000)/3600000);
+ const m=Math.floor((diff%3600000)/60000);
+ const s=Math.floor((diff%60000)/1000);
+ document.getElementById("days").textContent=String(d).padStart(2,"0");
+ document.getElementById("hours").textContent=String(h).padStart(2,"0");
+ document.getElementById("mins").textContent=String(m).padStart(2,"0");
+ document.getElementById("secs").textContent=String(s).padStart(2,"0");
+}
+updateCountdown();
+setInterval(updateCountdown,1000);
+
+// Original celebratory tune made with browser audio
+let audioCtx=null,playing=false,timer=null,note=0;
+const melody=[523.25,659.25,783.99,659.25,587.33,698.46,783.99,698.46];
+function playNote(){
+ if(!playing)return;
+ const osc=audioCtx.createOscillator();
+ const gain=audioCtx.createGain();
+ osc.type="sine";
+ osc.frequency.value=melody[note%melody.length];
+ gain.gain.setValueAtTime(0.0001,audioCtx.currentTime);
+ gain.gain.exponentialRampToValueAtTime(0.07,audioCtx.currentTime+0.04);
+ gain.gain.exponentialRampToValueAtTime(0.0001,audioCtx.currentTime+0.48);
+ osc.connect(gain);gain.connect(audioCtx.destination);
+ osc.start();osc.stop(audioCtx.currentTime+0.5);
+ note++;
+ timer=setTimeout(playNote,520);
+}
+async function toggleMusic(){
+ const btn=document.getElementById("musicBtn");
+ const status=document.getElementById("musicStatus");
+ if(!playing){
+  try{
+   audioCtx=audioCtx||new(window.AudioContext||window.webkitAudioContext)();
+   await audioCtx.resume();
+   playing=true;playNote();
+   btn.textContent="♫ Pause Music";
+   status.textContent="Celebration tune is playing";
+  }catch(e){status.textContent="Audio is not supported in this browser";}
+ }else{
+  playing=false;clearTimeout(timer);
+  btn.textContent="♫ Play Wedding Music";
+  status.textContent="Music paused";
+ }
+}
+</script>
+</body>
+</html>
